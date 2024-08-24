@@ -1,0 +1,117 @@
+/* Ensure proper positioning */
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    
+}
+
+.images {
+    position: relative;
+    height: 300px;
+    width: 400px;
+    margin: 10px; /* Margin for spacing around each image container */
+   
+    
+}
+
+.images img {
+    position: absolute;
+    left: 0;
+    height: 300px;
+    width: 400px;
+    transition: opacity 0s ease-in-out;
+    border-radius: 20px;
+  
+}
+
+/* Hover effect for images */
+.images img:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Style for the text label */
+.label {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    color: white; /* Change color to ensure visibility */
+    font-size: 24px; /* Adjust as needed */
+    font-weight: 600; /* Bold for better visibility */
+    background: rgba(0, 0, 0, 0.5); /* Optional: background for better readability */
+    padding: 5px; /* Optional: padding around the text */
+    border-radius: 5px; /* Optional: rounded corners for the background */
+    padding: 7px 30px;
+}
+.invest{
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+@media (max-width: 992px) {
+    .invest {
+        margin-bottom: 20px; /* Add spacing below the .invest div */
+        padding: 0 10px; /* Adjust horizontal padding for smaller screens */
+    }
+}
+
+/* For mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    .invest {
+        margin-bottom: 20px; /* Ensure spacing below the .invest div */
+        padding: 0 10px; /* Maintain padding for smaller screens */
+        font-size: 16px; /* Adjust font size for readability on mobile devices */
+    }
+}
+
+/* For very small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .invest {
+        margin-bottom: 20px; /* Maintain spacing below the .invest div */
+        padding: 0 5px; /* Reduce horizontal padding for very small screens */
+        font-size: 14px; /* Further reduce font size for better fit on small screens */
+    }
+}
+@media (max-width: 770px) {
+    .wrapper {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .images {
+        width: 90%; /* Adjust width to fit smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .label {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        padding: 5px 20px; /* Adjust padding */
+    }
+}
+@media (max-width: 992px) {
+    .images {
+        width: 300px; /* Adjust width for medium screens */
+        height: 225px; /* Adjust height proportionally */
+    }
+
+    .label {
+        font-size: 20px; /* Adjust font size for medium screens */
+        padding: 5px 20px; /* Adjust padding */
+    }
+}
+
+/* For mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    .images {
+        width: 250px; /* Adjust width for smaller screens */
+        height: 187px; /* Adjust height proportionally */
+    }
+
+    .label {
+        font-size: 18px; /* Adjust font size for mobile devices */
+        padding: 5px 15px; /* Adjust padding */
+    }
+}
