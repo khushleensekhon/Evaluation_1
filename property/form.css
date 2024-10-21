@@ -1,18 +1,135 @@
-*{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-header {
-    width: 100%;
-    transition: .3s linear;
+    font-family: Arial, sans-serif;
   }
-header nav {
+  .back{
+    padding: 20px;
+  }
+  body {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://cdn.dribbble.com/userupload/10078882/file/original-59ae269c790550045f0b7f9078978962.png?resize=1024x768);
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
     background-color: #fff;
-    
-    padding-left: 50px;
-   width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+  }
+  
+  .image-preview {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .image-preview img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .add-image {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+   .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .modal-header h5, .modal-body p {
+    color: #000; 
+}
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    background-color: #ccc;
+  }
+  
+  .continue-button {
+    background-color: rgb(88, 94, 144);
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  header nav {
+    background-color: #fff;
+    width: 100%;
+    padding-left: 200px;
+   
     height: 60px;
     display: flex;
     align-items: center;
@@ -37,14 +154,13 @@ header nav {
   
   header nav .right_bx ul li {
     padding: 3px 15px;
-    font-size: 50px;
   }
   
   header nav .right_bx ul li a {
     text-decoration: none;
     color: gray;
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     transition: 0.3s linear;
   }
   
@@ -142,99 +258,4 @@ header nav {
       transform: rotate(-45deg) translate(5px, -5px);
     }
   }
-.w-100-height{
-    height: 90vh;
-    width: 100%;
-}
-.carousel-item{
-    min-height: 300px;
-
-}
-.carousel-caption{
-    text-align: left;
-    margin-bottom: 200px;
-    z-index: 2;
-
-
-}
-.carousel-caption h5{
-    font-size: 60px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
-    line-height: 60px;
-    text-align: left;
-}
-.carousel-caption p{
-    width: 60%;
-    font-size: 16px;
-    line-height: 1.9;
-    text-align: left;
-}
-.carousel-item .carousel-caption input{
-    padding: 0.73rem 1rem;
-
-}
-.carousel-inner::before{
-    content: "";
-    position:absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0, 0.6);
-    z-index: 1;
-
-
-
-}
-
-.icon{
-    font-size: 40px;
-    font-weight: 700;
-    background: transparent;
-    border: 1px solid #ffffff74;
-    width:80px ;
-    height: 80px;
-    line-height: 1.8;
-    border-radius: 50%;
-}
-@media only screen and (max-width:767px){
-    .navbar-nav{
-        text-align: center;
-    }
-    .carousel-caption h5{
-        font-size: 30px;
-        letter-spacing: 0;
-        line-height: normal;
-
-
-    }
-    .carousel-caption p{
-        padding: 10px 15px;
-        font-size: 15px;
-
-    }
-    .carousel .card-bottom{
-        display: none;
-    }
-}
-.arrow-icon{
-    font-size: 28px;
-    font-weight: 800;
-}
-.bg-footer{
-    background-color: #000;
-    padding: 50px 0 30px;
-
-
-}
- .bg-footer a {
-    text-decoration: none;
-    color: #aeaeae;
-
- }
- 
-
-
-
+  
